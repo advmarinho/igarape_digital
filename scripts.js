@@ -1,4 +1,4 @@
-const apiUrl = 'http://ec2-3-83-103-52.compute-1.amazonaws.com:8080/api/livros';  // Atualize para a URL do seu backend na AWS
+const apiUrl = 'http://ec2-44-211-255-243.compute-1.amazonaws.com:8080/api/livros';  // Atualize para a URL do seu backend na AWS
 
 document.addEventListener('DOMContentLoaded', listarLivros);
 
