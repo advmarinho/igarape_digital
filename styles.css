@@ -1,0 +1,165 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #003366; /* Azul */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Área principal */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Necessário para posicionamento do banner */
+}
+
+/* Formulário */
+#livroForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#livroForm input,
+#livroForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#livroForm button {
+    background-color: #ff6600; /* Laranja */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#livroForm button:hover {
+    background-color: #e65c00;
+}
+
+/* Título da seção */
+h2 {
+    margin-bottom: 10px;
+    color: #003366;
+    text-align: center;
+}
+
+/* Tabela de livros */
+#livrosTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#livrosTable th,
+#livrosTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#livrosTable th {
+    background-color: #003366;
+    color: #fff;
+}
+
+#livrosTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para imagem da capa */
+#livrosTable .capa {
+    width: 50px; /* Tamanho da miniatura */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Estilo para o banner */
+#banner {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80%;
+    max-height: 400px;
+    display: none;
+    border: 3px solid #ff6600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+/* Rodapé */
+footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p, footer ul {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+footer ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #livroForm input,
+    #livroForm button {
+        width: 100%;
+    }
+
+    #livrosTable thead {
+        display: none;
+    }
+
+    #livrosTable tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #livrosTable td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    #livrosTable td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        text-align: left;
+        font-weight: bold;
+    }
+}

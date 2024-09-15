@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Livros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Livros</h1>
+        <p>Curso de Java Senai - Desenvolvido por Anderson Marinho | Igarapé Digital</p>
+    </header>
+
+    <main>
+        <form id="livroForm">
+            <input type="hidden" id="livroId">
+            <input type="text" id="nome" placeholder="Nome do Livro" required>
+            <input type="text" id="autor" placeholder="Autor" required>
+            <input type="number" id="ano" placeholder="Ano" required>
+            <input type="number" id="exemplares" placeholder="Exemplares" required>
+            <input type="text" id="fotoCapa" placeholder="URL da Foto da Capa" required>
+            <button type="button" onclick="salvarLivro()">Salvar Livro</button>
+        </form>
+
+        <h2>Lista de Livros</h2>
+        <table id="livrosTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Autor</th>
+                    <th>Ano</th>
+                    <th>Exemplares</th>
+                    <th>Foto Capa</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados serão inseridos aqui -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Este projeto envolveu as tecnologias:</p>
+        <ul>
+            <li>AWS S3</li>
+            <li>AWS EC2</li>
+            <li>AWS RDS</li>
+            <li>Backend em Java</li>
+            <li>Banco de Dados MariaDB</li>
+            <li>Front-end em HTML, CSS e JavaScript puro (sem frameworks)</li>
+        </ul>
+        <p>Desenvolvido por Anderson Marinho | Igarapé Digital</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
